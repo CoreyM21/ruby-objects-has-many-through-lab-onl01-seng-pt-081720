@@ -1,8 +1,15 @@
 class Patient 
-  attr_accessor :name 
+  attr_accessor :name, :doctor
   
-  def initialize(name)
-    @name = name 
+  @@all = []
+  
+  def initialize(name, doctor)
+    @name = name
+    @doctor = doctor
+  end
+  
+  def self.all 
+    @@all 
   end
     
   
